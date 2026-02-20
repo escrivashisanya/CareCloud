@@ -4,8 +4,10 @@ from django.urls import path
 from careapp import views
 urlpatterns = [
     path('admin/', admin.site.urls),
+
     path('', views.home,name='home'),
-    path('admin/', views.starter,name='start'),
+    
+    path('', views.starter,name='starter'),
 
 
     
