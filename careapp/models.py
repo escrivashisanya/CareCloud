@@ -23,5 +23,8 @@ class doctor(models.Model):
     phonenumber = models.CharField(max_length=10)  
     email = models.EmailField()
     yearsofexperience = models.IntegerField()
+    DOB = models.DateField(null=True)
+    age = models.IntegerField(null=True)
 
-    
+    def __str__(self) :
+        return self.firstname + " " +self.lastname
