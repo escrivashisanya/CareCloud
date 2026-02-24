@@ -28,3 +28,18 @@ class doctor(models.Model):
 
     def __str__(self) :
         return self.firstname + " " +self.lastname
+    
+
+
+class MyAppointment(models.Model):
+    name = models.CharField(max_length=50)
+    email = models.EmailField()
+    phone = models.CharField(max_length=20)
+    detatime = models.DateTimeField()
+    department = models.CharField(max_length=200)    
+    doctor = models.CharField(max_length=200)
+    message = models.TextField()
+
+    def __str__(self) :
+        return self.name 
+
