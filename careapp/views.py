@@ -17,7 +17,7 @@ def appointment(request):
             email = request.POST['email'],
             phone = request.POST['phone'],
             datetime = request.POST['date'],
-            depatment = request.POST['department'],
+            department = request.POST['department'],
             doctor = request.POST['doctor'],
             message = request.POST['message'],
 
@@ -36,3 +36,8 @@ def appointment(request):
 
 def about(request):
     return render(request,'about.html')
+
+
+def show(request):
+    allappointment = MyAppointment.objects.all()
+    return render(request,'show.html', {'allappointment': allappointment})
