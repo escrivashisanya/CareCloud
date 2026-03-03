@@ -7,3 +7,5 @@ admin.site.register(patient)
 admin.site.register(doctor)
 
 admin.site.register(MyAppointment)
+
+admin.site.register(Transaction)
